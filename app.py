@@ -124,8 +124,6 @@ def main():
             color='red'
         ), use_container_width=True)
 
-    st.balloons()
-
 
 @cache_on_button_press('Authenticate')
 def authenticate(password):
