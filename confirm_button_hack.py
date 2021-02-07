@@ -53,21 +53,3 @@ def cache_on_button_press(label, **cache_kwargs):
             return cache_entry.return_value
         return wrapped_func
     return function_decorator
-
-def display_func_source(func):
-    code = inspect.getsource(confirm_button_example)
-    code = '\n'.join(code.splitlines()[1:]) # remove first line
-    st.code(textwrap.dedent(code))
-
-if __name__ == '__main__':
-    st.write("""
-        This example shows a hack to create a "confirm button" in Streamlit, e.g.
-        to authenticate a username / password pair.
-        The correct answer is `buddha` / `s4msara`.
-    """)
-    display_func_source(confirm_button_example)
-    confirm_button_example()
-    
-    
-    
-  
