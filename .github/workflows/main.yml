@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git config user.email "zzsza@naver.com" && git config user.name "Seongyun Byeon" && git add -A && git commit -m "Updated code"
       - uses: akhileshns/heroku-deploy@v3.10.9
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
