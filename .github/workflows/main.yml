@@ -16,4 +16,4 @@ jobs:
           heroku_app_name: "zzsza-streamlit-deploy"
           heroku_email: "snugyun01@gmail.com"
         env: 
-          STREAMLIT_PASSWORD: ${{secrets.STREAMLIT_PASSWORD}}
+          HD_STREAMLIT_PASSWORD: ${{secrets.STREAMLIT_PASSWORD}}
