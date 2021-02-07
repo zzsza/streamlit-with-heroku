@@ -1,6 +1,9 @@
 name: Heroku Deploy
 
-on: [push]
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,5 +15,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "zzsza-streamlit-deploy"
           heroku_email: "snugyun01@gmail.com"
+          dontuseforce: true
         env: 
           HD_STREAMLIT_PASSWORD: ${{secrets.STREAMLIT_PASSWORD}}
