@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git add -A && git commit -m "Updated code"
       - uses: akhileshns/heroku-deploy@v3.10.9
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "zzsza-streamlit-deploy"
           heroku_email: "snugyun01@gmail.com"
-          dontuseforce: false
         env: 
           HD_STREAMLIT_PASSWORD: ${{secrets.STREAMLIT_PASSWORD}}
